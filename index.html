@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Burger AR</title>
+  <title>Burger AR Menu</title>
 
   <script type="module"
     src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
@@ -13,7 +13,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       text-align: center;
       background: #fff4e6;
     }
@@ -28,20 +28,21 @@
       background: #fff4e6;
     }
 
-    button {
+    #ar-button {
       background: #ff7a00;
       color: white;
       border: none;
       padding: 15px 25px;
       border-radius: 10px;
       font-size: 18px;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>My Burger 🍔</h1>
+  <h1>🍔 My Burger</h1>
 
   <model-viewer
     src="hamburger-060fd6.glb"
@@ -49,10 +50,11 @@
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
     auto-rotate
-    shadow-intensity="1">
+    shadow-intensity="1"
+    alt="3D Burger">
 
-    <button slot="ar-button">
-      View Burger in AR
+    <button id="ar-button" slot="ar-button">
+      View in AR
     </button>
 
   </model-viewer>
